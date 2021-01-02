@@ -1,0 +1,34 @@
+{
+	"name": "pma",
+	"version": "0.0.1",
+	"description": "a feature rich utility for MA3/2 to allow operators to take advantage of LUA easily.",
+	"scripts": {
+		"build": "tstl",
+		"dev": "tstl --watch",
+		"lint:check": "prettier --check **/*.{ts,d.ts}",
+		"lint:fix": "prettier --write **/*.{ts,d.ts}"
+	},
+	"prettier": {
+		"printWidth": 100,
+		"proseWrap": "never",
+		"singleQuote": true,
+		"trailingComma": "all",
+		"useTabs": true
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/LightYourWay/pma.git"
+	},
+	"author": "Lukas Runge",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/LightYourWay/pma/issues"
+	},
+	"homepage": "https://github.com/LightYourWay/pma#readme",
+	"devDependencies": {
+		"lua-types": "^2.8.0",
+		"prettier": "^2.2.1",
+		"ts-node": "^9.1.1",
+		"typescript-to-lua": "^0.37.0"
+	}
+}
