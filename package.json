@@ -1,6 +1,6 @@
 {
-	"name": "pma",
-	"version": "0.0.1",
+	"name": "ma-tools",
+	"version": "0.1.3",
 	"description": "a feature rich utility for MA3/2 to allow operators to take advantage of LUA easily.",
 	"scripts": {
 		"build": "tstl",
