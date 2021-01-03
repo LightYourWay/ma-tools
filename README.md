@@ -11,6 +11,11 @@ The plugin can currently not be directly installed or tested by grandMA3/2 opera
 ## usage / possible future featureset
 
 - `ma.cli` - commandline tools to navigate the consoles cli easily
+  - `ma.cli()` - opens text input and asks for cmd
+  - `ma.cli("cd /")` - parses input and executes the `ma-tools` function
+  - `ma.cli{"Printf", Version()}` - directly executes the `ma-tools` function
+  - `ma.cli(true)` - opens popup over and over
+  - `ma.cli("Fixture 1")` - selects Fixture 1
 - `ma.ui` - UI Tools to build great user experiences with e.g. Layout Views
 - `ma.op` - easy to integrate tools for MA3/2 Operators
 - `ma.cfg` - configuration helper functions

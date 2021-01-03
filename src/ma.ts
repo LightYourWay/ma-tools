@@ -3,11 +3,8 @@ declare var ma: any;
 ma = {};
 
 // import cli and make cmds a globally avaliable subdomain of ma
-import * as cli from './modules/cli';
-declare var ls: () => void;
-declare var cd: (args: any[]) => void;
-ls = cli.ls;
-cd = cli.cd;
+import { cli } from './modules/cli';
+ma.cli = cli;
 
 // import utils and hooking them into the global ma-tools variable
 import * as utils from './modules/utils';
