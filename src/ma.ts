@@ -10,6 +10,10 @@ ma.cli = cli;
 import * as utils from './modules/utils';
 ma.utils = utils;
 
+// import ui and hooking them into the global ma-tools variable
+import * as ui from './modules/ui';
+ma.ui = ui;
+
 // version functions
 ma.tools_version = 'v0.1.3';
 ma.version = () => {

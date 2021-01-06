@@ -5,7 +5,7 @@
 		"lib": ["esnext"],
 		"module": "commonjs",
 		"moduleResolution": "node",
-		"types": ["typescript-to-lua/language-extensions", "lua-types/5.3", "grandMA3-types/lua"],
+		"types": ["typescript-to-lua/language-extensions", "lua-types/5.3", "grandMA3-types"],
 		"strict": true
 	},
 	"exclude": ["./src/Plugin/"],
