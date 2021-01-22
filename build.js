@@ -46,6 +46,20 @@ end\n`,
 			fs.writeFile(filename, result, 'utf8', function (err) {
 				if (err) return console.log(err);
 			});
+			fs.rename('dist/ma-tools.lua', `dist/ma-tools_v${process.env.npm_package_version}.lua`, function (err) {
+				if (err) return console.log(err);
+			});
+
+			fs.writeFile(`dist/ma-tools_v${process.env.npm_package_version}.xml`, `<?xml version="1.0" encoding="UTF-8"?>
+<GMA3 DataVersion="1.4.0.2">
+    <Plugin Name="ma-tools" Version="0.0.0.0">
+        <ComponentLua Name="ma-tools" FileName="ma-tools_v${process.env.npm_package_version}.lua" ContentType="Automatic">
+        </ComponentLua>
+    </Plugin>
+</GMA3>
+`, `utf8`, function (err) {
+				if (err) return console.log(err);
+			})
 		} catch (err) {
 			console.error(err);
 		}
