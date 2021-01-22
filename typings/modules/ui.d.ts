@@ -3,7 +3,7 @@
 /** @noSelfInFile */
 
 declare namespace ma {
-	namespace utils {
-		function dump(o: any): string;
+	namespace ui {
+		function gotoSequ(display_handle: number, Sequ: number): void;
 	}
 }

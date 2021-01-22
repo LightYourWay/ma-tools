@@ -3,7 +3,5 @@
 /** @noSelfInFile */
 
 declare namespace ma {
-	namespace utils {
-		function dump(o: any): string;
-	}
+	function cli(...user_input: any): void;
 }
