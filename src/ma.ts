@@ -24,7 +24,7 @@ ma.version = () => {
 // plugin main entry point
 // ****************************************************************
 function Main(display_handle: number, argument: any) {
-	Printf('Hallo');
+	Printf(ma.version());
 }
 
 // ****************************************************************
