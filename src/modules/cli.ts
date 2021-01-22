@@ -1,5 +1,3 @@
-import { dump } from './utils';
-
 type Callable = (this: void, ...args: any[]) => any;
 
 const callable_G = (globalThis as unknown) as { [key: string]: Callable };
