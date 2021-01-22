@@ -21,6 +21,16 @@ ma.version = () => {
 };
 
 // ****************************************************************
+// plugin load entry point
+// ****************************************************************
+function Load() {
+	Echo(`ma-tools have been loaded...`);
+	Echo(ma.version());
+}
+
+Load();
+
+// ****************************************************************
 // plugin main entry point
 // ****************************************************************
 function Main(display_handle: number, argument: any) {
