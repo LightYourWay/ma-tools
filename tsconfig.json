@@ -12,8 +12,8 @@
 	"tstl": {
 		"luaTarget": "5.3",
 		"noHeader": true,
-		"luaBundle": "dist/ma.lua",
-		"luaBundleEntry": "src/ma.ts",
+		"luaBundle": "dist/ma-tools.lua",
+		"luaBundleEntry": "src/ma-tools.ts",
 		"noImplicitSelf": true,
 		"luaPlugins": [{ "name": "grandMA3-tstl-plugin/fix_export.ts" }]
 	}
