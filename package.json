@@ -3,7 +3,7 @@
 	"version": "0.1.3",
 	"description": "a feature rich utility for MA3/2 to allow operators to take advantage of LUA easily.",
 	"scripts": {
-		"build": "tstl",
+		"build": "tstl && node build.js",
 		"dev": "tstl --watch",
 		"lint:check": "prettier --check **/*.{ts,d.ts}",
 		"lint:fix": "prettier --write **/*.{ts,d.ts}"
