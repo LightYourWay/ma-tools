@@ -1,4 +1,7 @@
-var fs = require('fs');
+const { once } = require('events');
+const { createInterface } = require('readline');
+const fs = require('fs');
+
 var filename = 'dist/ma-tools.lua';
 fs.readFile(filename, 'utf8', function (err, data) {
 	if (err) {
@@ -22,7 +25,29 @@ fs.readFile(filename, 'utf8', function (err, data) {
 end\n`,
 	);
 
-	fs.writeFile(filename, result, 'utf8', function (err) {
-		if (err) return console.log(err);
-	});
+	let license = [];
+
+	(async function processLineByLine() {
+		try {
+			const rl = createInterface({
+				input: fs.createReadStream('LICENSE'),
+				crlfDelay: Infinity,
+			});
+
+			rl.on('line', (line) => {
+				license.push(`-- ${line}`);
+			});
+
+			await once(rl, 'close');
+
+			result = license.join(`\n`) + '\n' +
+				result;
+
+			fs.writeFile(filename, result, 'utf8', function (err) {
+				if (err) return console.log(err);
+			});
+		} catch (err) {
+			console.error(err);
+		}
+	})();
 });
