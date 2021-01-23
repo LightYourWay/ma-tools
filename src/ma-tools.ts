@@ -15,7 +15,7 @@ import * as ui from './modules/ui';
 ma.ui = ui;
 
 // version functions
-ma.tools_version = 'v0.1.3';
+ma.tools_version = 'v0.2.1';
 ma.version = () => {
 	return 'MA3 ' + Version() + ' | ' + _VERSION + ' | MA Tools ' + ma.tools_version;
 };
