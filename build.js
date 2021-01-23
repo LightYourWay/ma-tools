@@ -2,7 +2,7 @@ const { once } = require('events');
 const { createInterface } = require('readline');
 const fs = require('fs');
 
-var filename = 'dist/ma-tools.lua';
+var filename = `dist/${process.env.npm_package_name}.lua`;
 fs.readFile(filename, 'utf8', function (err, data) {
 	if (err) {
 		return console.log(err);
@@ -46,14 +46,14 @@ end\n`,
 			fs.writeFile(filename, result, 'utf8', function (err) {
 				if (err) return console.log(err);
 			});
-			fs.rename('dist/ma-tools.lua', `dist/ma-tools_v${process.env.npm_package_version}.lua`, function (err) {
+			fs.rename(`dist/${process.env.npm_package_name}.lua`, `dist/${process.env.npm_package_name}_v${process.env.npm_package_version}.lua`, function (err) {
 				if (err) return console.log(err);
 			});
 
-			fs.writeFile(`dist/ma-tools_v${process.env.npm_package_version}.xml`, `<?xml version="1.0" encoding="UTF-8"?>
+			fs.writeFile(`dist/${process.env.npm_package_name}_v${process.env.npm_package_version}.xml`, `<?xml version="1.0" encoding="UTF-8"?>
 <GMA3 DataVersion="1.4.0.2">
-    <Plugin Name="ma-tools" Version="0.0.0.0">
-        <ComponentLua Name="ma-tools" FileName="ma-tools_v${process.env.npm_package_version}.lua" ContentType="Automatic">
+    <Plugin Name="${process.env.npm_package_name}" Version="${process.env.npm_package_version}">
+        <ComponentLua Name="${process.env.npm_package_name}" FileName="${process.env.npm_package_name}_v${process.env.npm_package_version}.lua" ContentType="Automatic">
         </ComponentLua>
     </Plugin>
 </GMA3>
