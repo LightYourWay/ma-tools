@@ -26,6 +26,8 @@
 	},
 	"homepage": "https://github.com/LightYourWay/pma#readme",
 	"devDependencies": {
+		"grandma3-tstl-plugin": "^0.2.2",
+		"grandma3-types": "^0.3.2",
 		"lua-types": "^2.8.0",
 		"prettier": "^2.2.1",
 		"ts-node": "^9.1.1",

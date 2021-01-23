@@ -15,6 +15,6 @@
 		"luaBundle": "dist/ma-tools.lua",
 		"luaBundleEntry": "src/ma-tools.ts",
 		"noImplicitSelf": true,
-		"luaPlugins": [{ "name": "grandMA3-tstl-plugin/fix_export.ts" }]
+		"luaPlugins": [{ "name": "grandMA3-tstl-plugin" }]
 	}
 }
