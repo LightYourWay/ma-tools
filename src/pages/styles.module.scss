@@ -1,0 +1,37 @@
+main {
+	min-height: 100vh;
+}
+
+.title {
+	font-weight: 100;
+	font-size: 4rem !important;
+}
+
+.heroBanner {
+	background-color: transparent;
+	text-align: center;
+	flex-flow: column;
+	padding: 4rem 0;
+	@media screen and (max-width: 996px) {
+			padding: 2rem 0;
+	}
+}
+
+.quickNavButtons {
+	display: flex;
+	> a {
+			margin: 0 5px;
+	}
+}
+
+.quickNavButton {
+	width: 171px;
+}
+
+.example {
+	font-size: 0.8rem;
+}
+
+.example pre {
+	height: 100%;
+}
