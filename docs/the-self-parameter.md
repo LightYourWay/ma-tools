@@ -97,7 +97,7 @@ end)
 
 ### `@noSelf`
 
-If you wish to specify that all functions in a class, interface or namespace should not have a context parameter, you can use the [`@noSelf`](./advanced/compiler-annotations.md#noself) annotation.
+If you wish to specify that all functions in a class, interface or namespace should not have a context parameter, you can use the [`@noSelf`](./demo/test1.md) annotation.
 
 **Example**
 
@@ -141,9 +141,9 @@ Namespace:foo("foo")
 
 ### `@noSelfInFile`
 
-If you want to specify that all functions in a file should have no context, you can use [`@noSelfInFile`](./advanced/compiler-annotations.md#noselfinfile) at the top of the file.
+If you want to specify that all functions in a file should have no context, you can use [`@noSelfInFile`](./demo/test2.md) at the top of the file.
 
-For more information on [`@noSelf`](./advanced/compiler-annotations.md#noself) and [`@noSelfInFile`](./advanced/compiler-annotations.md#noselfinfile), please refer to [Compiler Annotations](./advanced/compiler-annotations).
+For more information on [`@noSelf`](./demo/test3.md) and [`@noSelfInFile`](./demo/test1.md), please refer to [Compiler Annotations](./demo/test2.md).
 
 ### `noImplicitSelf`
 
