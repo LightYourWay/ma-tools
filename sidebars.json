@@ -1,0 +1,13 @@
+{
+	"docs": [
+			"getting-started",
+			"configuration",
+			"caveats",
+			"the-self-parameter",
+			{
+				"type": "category",
+				"label": "Demo",
+				"items": ["demo/test1", "demo/test2", "demo/test3"]
+			}
+	]
+}

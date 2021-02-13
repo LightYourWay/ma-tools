@@ -1,5 +1,5 @@
 ---
-id: doc2
+id: configuration
 title: Document Number 2
 ---
 

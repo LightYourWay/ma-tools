@@ -1,6 +1,7 @@
+/** @type {import('@docusaurus/types').DocusaurusConfig} */
 module.exports = {
-  title: 'My Site',
-  tagline: 'The tagline of my site',
+  title: 'MA Tools',
+  tagline: 'a feature rich libray to allow operators to take advantage of LUA easily.',
   url: 'https://lightyourway.github.io',
   baseUrl: '/ma-tools/',
   onBrokenLinks: 'throw',
@@ -14,7 +15,7 @@ module.exports = {
       respectPrefersColorScheme: true,
 		},
     navbar: {
-      title: 'My Site',
+      title: 'MA Tools',
       logo: {
         alt: 'My Site Logo',
         src: 'img/logo.svg',
@@ -26,9 +27,8 @@ module.exports = {
           label: 'Docs',
           position: 'left',
         },
-        {to: 'blog', label: 'Blog', position: 'left'},
         {
-          href: 'https://github.com/facebook/docusaurus',
+          href: 'https://github.com/LightYourWay/ma-tools',
           label: 'GitHub',
           position: 'right',
         },
@@ -71,39 +71,33 @@ module.exports = {
           title: 'More',
           items: [
             {
-              label: 'Blog',
-              to: 'blog',
-            },
-            {
               label: 'GitHub',
-              href: 'https://github.com/facebook/docusaurus',
+              href: 'https://github.com/LightYourWay/ma-tools',
             },
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} Lukas Runge Veranstaltungstechnik`,
     },
+		prism: {
+			additionalLanguages: ["lua"],
+			theme: require("prism-react-renderer/themes/github"),
+			darkTheme: require("prism-react-renderer/themes/vsDark"),
+		},
   },
   presets: [
     [
       '@docusaurus/preset-classic',
       {
         docs: {
-          sidebarPath: require.resolve('./sidebars.js'),
-          // Please change this to your repo.
-          editUrl:
-            'https://github.com/facebook/docusaurus/edit/master/website/',
-        },
-        blog: {
-          showReadingTime: true,
-          // Please change this to your repo.
-          editUrl:
-            'https://github.com/facebook/docusaurus/edit/master/website/blog/',
-        },
+					sidebarPath: require.resolve("./sidebars.json"),
+					editUrl: "https://github.com/LightYourWay/ma-tools/edit/source/",
+			},
         theme: {
-          customCss: require.resolve('./src/css/custom.css'),
+          customCss: require.resolve('./src/custom.scss'),
         },
       },
     ],
   ],
+	plugins: [require.resolve("./docusaurus-plugin")],
 };

@@ -1,5 +1,5 @@
 ---
-id: doc1
+id: getting-started
 title: Style Guide
 sidebar_label: Style Guide
 slug: /
