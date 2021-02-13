@@ -9,6 +9,10 @@ module.exports = {
   organizationName: 'LightYourWay', // Usually your GitHub org/user name.
   projectName: 'ma-tools', // Usually your repo name.
   themeConfig: {
+		colorMode: {
+      defaultMode: 'dark',
+      respectPrefersColorScheme: true,
+		},
     navbar: {
       title: 'My Site',
       logo: {
