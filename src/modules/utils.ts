@@ -12,3 +12,11 @@ export function dump(o: any): string {
 		return tostring(o);
 	}
 }
+
+export function findSequence(identifier: number | string) {
+	return ShowData().DataPools.Default.Sequences[identifier];
+}
+
+export function findCue(sequence: Sequence, identifier: number | string) {
+	return sequence[identifier];
+}
